@@ -1,0 +1,263 @@
+//// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+//
+//// Variables
+//@import 'variables';
+//
+//// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+body{
+    direction: rtl;
+    background: #fefefe;
+}
+*{
+    font-family: IRANSans;
+}
+.row{
+    width:95%;
+    margin-right: 2%;
+}
+.image-responsiv{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline;
+}
+.header-image{
+    position: relative;
+    display: inline;
+}
+.image-logo{
+    position: absolute;
+    left: 85%;
+    top: 0;
+    max-width: 15%;
+}
+.nav-bar{
+    background-color: #012148;
+    padding: 10px;
+
+    p{
+        padding-right: 4%;
+        float: right;
+        display: block;
+        color: #fff;
+    }
+    a{
+        padding-left: 4%;
+        display:inline-block;
+        color: #fff;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+    p{
+        cursor: pointer;
+        padding-left: 4%;
+        display:inline-block;
+        color: #fff;
+        text-decoration: none;
+    }
+    p:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+}
+.center-image{
+    text-align: center;
+    padding-top: 5%;
+}
+
+.card-center{
+    width: 40%;
+    margin: 0 auto;
+
+}
+.card-header{
+    background: #fff;
+}
+.nav-link{
+    color: #C7C1C1;
+}
+.card-header-tabs{
+    padding: 0;
+}
+.nav-item{
+
+    a:focus{
+        color: black;
+        font-weight: bold !important;
+        border-bottom: 5px solid #991111 !important;
+    }
+}
+
+.label{
+    span{
+        color: #C90065;
+    }
+    p{
+        color: #C90065;
+display: inline;
+    }
+}
+.input{
+    border: 1px solid #E1E1E1;
+    outline: #E1E1E1;
+    border-radius: 3px;
+    padding: 7px;
+    direction: ltr;
+}
+
+.active-nav-link{
+    color: black;
+    font-weight: bold !important;
+    border-bottom: 5px solid #991111 !important;
+}
+@media (max-width: 320px) {
+    .card-center{
+        width: 80%;
+    }
+    .nav-bar{
+        font-size: 12px;
+    }
+
+}
+@media (min-width: 321px) and (max-width: 480px) {
+    .card-center{
+        width: 80%;
+    }
+}
+@media (max-width: 767px)
+{
+    .card-center{
+        width: 80%;
+    }
+}
+@media (max-width: 1024px)
+{
+    .card-center{
+        width: 60%;
+    }
+}
+#singup-right{
+    label{
+    float: right;
+    }
+}
+.footer{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    p{
+        margin: 0;
+    }
+        a{
+            color: rgb(194, 224, 255);
+        }
+        color: #fff;
+
+    background-color: #012148;
+
+}
+.ltr{
+    direction: ltr;
+}
+.img-profile{
+    text-align: center;
+    width: 150px;
+    height: 150px;
+}
+.redius{
+    border-radius: 10px;
+
+}
+.spa{
+    span{
+        position: relative;
+        top: -15px;
+    }
+    min-width: 22%;
+}
+input::placeholder{
+    color:#BCBCBC;
+}
+textarea::placeholder{
+    color:#BCBCBC;
+}
+.edit-circle{
+    background: #991111;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    left: -60%;
+    position: relative;
+    top: -46px;
+    i{
+        margin: 12px 10px 0 0;
+    }
+}
+.ul-menu{
+    list-style: none;
+    text-align: right;
+    padding-right: 6%;
+    li{
+        background: none;
+        transition: background 0.2s ;
+        font-size: 17px;
+        padding: 18px;
+        border-radius: 5px;
+        padding-right: 0;
+        a{
+            text-decoration: none;
+            color: #C7C1C1;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        lable{
+            cursor: pointer;
+            color: #C7C1C1!important;
+        }
+        .active-a{
+            color:#991111!important;
+        }
+    }
+    li:hover{
+        background: rgba(241, 241, 241, 0.82);
+    }
+
+}
+ #menu-title{
+     font-weight: bold;
+     border-bottom: 3px solid #991111;
+     text-align: right;
+     display: inline;
+     position: unset;
+     max-height: 50px;
+ }
+.user-form{
+    .label{
+        font-weight: bold;
+    }
+    .btn-secondary{
+        background-color: #E3DEDE;
+        border:0;
+    }
+    .secondary-p{
+        color:#E3DEDE ;
+    }
+    .input{
+        margin-top: 7px;
+    }
+}
+.card-height{
+    height: 1%;
+}
+
+#exi{
+    color:#C7C1C1 ;
+}
