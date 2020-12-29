@@ -35,48 +35,48 @@
                 </span>
                 <ul class="ul-menu float-right">
                     @can('admin')
-                        <li>
+                        <li style="color: black">
                             <img src="{{asset('image/avatar.png')}}">
-                            <a href="{{route('adminPanel')}}" id="dash" class="">
+                            <a  style="color: black"  href="{{route('adminPanel')}}" id="dash" class="">
                                 پنل مدیریت
                             </a>
                         </li>
                     @endcan
                     <li>
                         <img src="{{asset('image/avatar.png')}}">
-                        <a href="{{route('profile')}}" id="prof" class="">
+                        <a  style="color: black" href="{{route('profile')}}" id="prof" class="">
                             اطلاعات کاربری
                         </a>
                     </li>
-                    <li>
+                    <li style="color: black">
                         <img src="{{asset('image/user-password.png')}}">
-                        <a href="{{route('pass')}}" id="pass" class="">
+                        <a  style="color: black"  href="{{route('pass')}}" id="pass" class="">
                             تغییر رمز عبور
                         </a>
                     </li>
-                    <li>
+                    <li style="color: black">
                         <img src="{{asset('image/location.png')}}">
-                        <a href="{{route('adr')}}" class="" id="addre">
+                        <a  style="color: black"  href="{{route('adr')}}" class="" id="addre">
                             آدرس ها
                         </a>
                     </li>
-                    <li>
+                    <li style="color: black">
                         <img src="{{asset('image/ecommerce.png')}}">
-                        <a href="{{route('action.create')}}" class="" id="acti">
+                        <a  style="color: black"  href="{{route('action.create')}}" class="" id="acti">
                             ثبت فعالیت
                         </a>
                     </li>
-                    <li>
+                    <li style="color: black">
                         <img src="{{asset('image/box.png')}}">
-                        <a href="{{route('action.index')}}" class="" id="repo">
+                        <a style="color: black"  href="{{route('action.index')}}" class="" id="repo">
                             گزارش فعالیت ها
                         </a>
                     </li>
-                    <li>
+                    <li style="cursor:pointer;color: black">
                         <img src="{{asset('image/log-out.png')}}">
 
 
-                        <label for="logout" id="exi">
+                        <label  style="color: black"  for="logout" id="exi">
 
                             خروج
 

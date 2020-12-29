@@ -23,7 +23,7 @@ class PointMiddleware {
             foreach ($data as $d) {
                 $p+=$d->points;
             }
-            $per = $p*100/5000;
+
         }
         $khoshe = [
             "5"=>[
@@ -38,15 +38,21 @@ class PointMiddleware {
                 1300,1500
             ],
         ];
+        $per = 100;
         $userKhoshe = "بدون خوشه بندی";
         foreach ($khoshe as $l => $k){
             if ($class=="کارشناسی") {
                 if ($p>$k[1]) {
                     $userKhoshe = "خوشه $l";
+                    if ($l!='1')
+                        $per = $p*100/$khoshe[$l-1][1];
+
                 }
             }else{
                 if ($p>$k[0]) {
                     $userKhoshe = "خوشه $l";
+                    if ($l!='1')
+                        $per = $p*100/$khoshe[$l-1][0];
                 }
             }
         }
