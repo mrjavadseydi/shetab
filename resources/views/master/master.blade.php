@@ -39,7 +39,7 @@
             }
             if (n == 6) {
                 $('#dashb').addClass('active-a');
-                $("#dashb").prev().style("color", "#991111");
+                $("#dashb").prev().attr("src", "{{asset('image/activ-dashboard.svg')}}");
             }
         }
     </script>
