@@ -54,4 +54,10 @@ class PanelController extends Controller {
         }
     }
 
+
+    public function dashboard(){
+        return view('user.dashboard');
+    }
+
+
 }

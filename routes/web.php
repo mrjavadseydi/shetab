@@ -24,6 +24,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::prefix('userPanel')->middleware(['auth','point'])->group(function () {
+    Route::get('/Dashboard', 'PanelController@dashboard')->name('dash');
     Route::get('/Panel', 'PanelController@panel')->name('profile');
     Route::get('/ChangePassword', 'PanelController@reset')->name('pass');
     Route::get('/address', 'PanelController@address')->name('adr');

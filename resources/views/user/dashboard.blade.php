@@ -8,39 +8,15 @@
                 <span id="menu-title">
                      داشبورد
                 </span>
-        <div>
-            <a href="" class="mt-3 alert alert-danger d-block" role="alert">
-                اخطار شما 6 کار ناتمام  دارید!
-            </a>
-            <div class="row">
-            <p class="title col-6">
-                میزان امتیازات شما :
-                <span>
-                    12345
-                </span>
-            </p>
-            <p class="title col-6">
-                تعداد فعالیت های ثبت شده شما :
-                <span>
-                    15
-                </span>
-            </p>
-            </div>
-            <br>
+            <div>
 
-            <p class="title">
-                تعداد فعالیت های تایید شده  :
-                <span>
-                    5
-                </span>
-            </p>
-        </div>
+            </div>
         </div>
     </div>
 
-        @endsection
-        @section('script')
-            <script>
-
-            </script>
+@endsection
+@section('script')
+    <script>
+        activeMenu(6);
+    </script>
 @endsection

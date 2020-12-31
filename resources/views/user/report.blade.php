@@ -130,7 +130,8 @@
         $(document).ready(function ()
         {
             $('.tfhide').hide();
-            var table = $('#dt-filter-search').DataTable({
+            var table = $('#dt-filter-search')
+                .DataTable({
 
                 initComplete: function () {
                     // Apply the search

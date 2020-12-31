@@ -16,36 +16,40 @@
     <script src="{{asset('js/persian-datepicker.min.js')}}"></script>
     <script src="{{asset('plugin/ir-city-select.min.js')}}"></script>
     <script>
-        function activeMenu(n){
-            if(n==1){
+        function activeMenu(n) {
+            if (n == 1) {
                 $('#prof').addClass('active-a');
-                $("#prof").prev().attr("src","{{asset('image/avatar-active.png')}}");
+                $("#prof").prev().attr("src", "{{asset('image/avatar-active.png')}}");
             }
-            if(n==2){
+            if (n == 2) {
                 $('#pass').addClass('active-a');
-                $("#pass").prev().attr("src","{{asset('image/password-active.png')}}");
+                $("#pass").prev().attr("src", "{{asset('image/password-active.png')}}");
             }
-            if(n==3){
+            if (n == 3) {
                 $('#addre').addClass('active-a');
-                $("#addre").prev().attr("src","{{asset('image/location-active.png')}}");
+                $("#addre").prev().attr("src", "{{asset('image/location-active.png')}}");
             }
-            if(n==4){
+            if (n == 4) {
                 $('#acti').addClass('active-a');
-                $("#acti").prev().attr("src","{{asset('image/ecommerce-active.png')}}");
+                $("#acti").prev().attr("src", "{{asset('image/ecommerce-active.png')}}");
             }
-            if(n==5){
+            if (n == 5) {
                 $('#repo').addClass('active-a');
-                $("#repo").prev().attr("src","{{asset('image/box-active.png')}}");
+                $("#repo").prev().attr("src", "{{asset('image/box-active.png')}}");
+            }
+            if (n == 6) {
+                $('#dashb').addClass('active-a');
+                $("#dashb").prev().style("color", "#991111");
             }
         }
     </script>
     <title>{{env('APP_NAME')}}</title>
 </head>
-<body >
+<body>
 <header class="m-0 p-0 header-image d-inline">
     <img src="{{asset('image/header.png')}}" class="image-responsiv ">
     <div class="container-fluid">
-        <img src="{{asset('image/logo.svg')}}" class="image-logo ">
+        <img src="{{asset('image/22222.png')}}" class="image-logo ">
     </div>
 </header>
 <div class="nav-bar">
@@ -57,62 +61,86 @@ cc
     </p>
 
     <a href="{{route('login')}}">
-        حساب کاربری
+        @if(auth()->check())
+            پروفایل
+        @else
+            حساب کاربری
+        @endif
     </a>
 </div>
 
 @yield('main')
 <br>
 <br>
-<div class="footer">
-    <p>
+<div class="footer" style="padding: 8px">
+    <p style="    font-size: 12px;">
         طراحی و توسعه توسط
         <a href="https://daneshjooyar.com">دانشجویار</a>
     </p>
 </div>
 <script>
-    week= new Array("يكشنبه","دوشنبه","سه شنبه","چهارشنبه","پنج شنبه","جمعه","شنبه")
-    months = new Array("فروردين","ارديبهشت","خرداد","تير","مرداد","شهريور","مهر","آبان","آذر","دي","بهمن","اسفند");
+    week = new Array("يكشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنج شنبه", "جمعه", "شنبه")
+    months = new Array("فروردين", "ارديبهشت", "خرداد", "تير", "مرداد", "شهريور", "مهر", "آبان", "آذر", "دي", "بهمن", "اسفند");
     a = new Date();
-    d= a.getDay();
-    day= a.getDate();
-    month = a.getMonth()+1;
-    year= a.getYear();
-    year = (year== 0)?2000:year;
-    (year<1000)? (year += 1900):true;
-    year -= ( (month < 3) || ((month == 3) && (day < 21)) )? 622:621;
+    d = a.getDay();
+    day = a.getDate();
+    month = a.getMonth() + 1;
+    year = a.getYear();
+    year = (year == 0) ? 2000 : year;
+    (year < 1000) ? (year += 1900) : true;
+    year -= ((month < 3) || ((month == 3) && (day < 21))) ? 622 : 621;
     switch (month) {
-        case 1: (day<21)? (month=10, day+=10):(month=11, day-=20); break;
-        case 2: (day<20)? (month=11, day+=11):(month=12, day-=19); break;
-        case 3: (day<21)? (month=12, day+=9):(month=1, day-=20); break;
-        case 4: (day<21)? (month=1, day+=11):(month=2, day-=20); break;
+        case 1:
+            (day < 21) ? (month = 10, day += 10) : (month = 11, day -= 20);
+            break;
+        case 2:
+            (day < 20) ? (month = 11, day += 11) : (month = 12, day -= 19);
+            break;
+        case 3:
+            (day < 21) ? (month = 12, day += 9) : (month = 1, day -= 20);
+            break;
+        case 4:
+            (day < 21) ? (month = 1, day += 11) : (month = 2, day -= 20);
+            break;
         case 5:
-        case 6: (day<22)? (month-=3, day+=10):(month-=2, day-=21); break;
+        case 6:
+            (day < 22) ? (month -= 3, day += 10) : (month -= 2, day -= 21);
+            break;
         case 7:
         case 8:
-        case 9: (day<23)? (month-=3, day+=9):(month-=2, day-=22); break;
-        case 10:(day<23)? (month=7, day+=8):(month=8, day-=22); break;
+        case 9:
+            (day < 23) ? (month -= 3, day += 9) : (month -= 2, day -= 22);
+            break;
+        case 10:
+            (day < 23) ? (month = 7, day += 8) : (month = 8, day -= 22);
+            break;
         case 11:
-        case 12:(day<22)? (month-=3, day+=9):(month-=2, day-=21); break;
-        default: break;
+        case 12:
+            (day < 22) ? (month -= 3, day += 9) : (month -= 2, day -= 21);
+            break;
+        default:
+            break;
     }
-    var persiandate =" "+week[d]+" "+day+" "+months[month-1]+" "+ year;
-    document.getElementById('navbardate').innerHTML =persiandate;
+    var persiandate = " " + week[d] + " " + day + " " + months[month - 1] + " " + year;
+    document.getElementById('navbardate').innerHTML = persiandate;
 </script>
 {{--<script src="{{asset('js/app.js')}}"></script>--}}
 <script src="{{asset('js/bootstrap.js')}}"></script>
 <script>
     function changename(name) {
-        document.getElementById('usersname').innerText =name;
+        document.getElementById('usersname').innerText = name;
     }
+
     function changepoint(point) {
-        document.getElementById('userspoints').innerText =point;
+        document.getElementById('userspoints').innerText = point;
     }
-    function changeprog(per){
-        $('#userspointpercent').css('width',per);
+
+    function changeprog(per) {
+        $('#userspointpercent').css('width', per);
     }
+
     @if(auth()->check())
-    $( document ).ready(function() {
+    $(document).ready(function () {
         changename('{{auth()->user()->name}}');
         changepoint('{{session('point')}} , {{session('khoshe')}}');
         changeprog('{{session('percent')}}');
@@ -130,18 +158,19 @@ cc
         $('.active-nav-link').removeClass('active-nav-link');
         $(this).addClass(' active-nav-link');
     })
+
     function checkpass() {
         var pass = document.getElementById('password1').value;
 
-        if(pass!=pass){
+        if (pass != pass) {
             $('.wrong-pass').text(" رمز عبور و تکرار آن یکسان نیست");
             $('.wrong-pass').show();
             document.getElementById('singup').disabled = true;
-        }else{
+        } else {
             $('.wrong-pass').hide();
             document.getElementById('singup').disabled = false;
         }
-        if(pass.length<8){
+        if (pass.length < 8) {
             $('.wrong-pass').text(" رمز عبور شما کمتر از 8 رقم میباشد!");
             $('.wrong-pass').show();
             document.getElementById('singup').disabled = true;

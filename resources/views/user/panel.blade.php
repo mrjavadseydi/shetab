@@ -36,12 +36,18 @@
                 <ul class="ul-menu float-right">
                     @can('admin')
                         <li style="color: black">
-                            <img src="{{asset('image/avatar.png')}}">
+                            <img src="{{asset('image/admin.svg')}}">
                             <a  style="color: black"  href="{{route('adminPanel')}}" id="dash" class="">
                                 پنل مدیریت
                             </a>
                         </li>
                     @endcan
+                        <li>
+                            <img src="{{asset('image/dashboard.svg')}}">
+                            <a  style="color: black" href="{{route('dash')}}" id="dashb" class="">
+                                پنل کاربری
+                            </a>
+                        </li>
                     <li>
                         <img src="{{asset('image/avatar.png')}}">
                         <a  style="color: black" href="{{route('profile')}}" id="prof" class="">
