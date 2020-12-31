@@ -45,7 +45,7 @@
                         <li>
                             <img src="{{asset('image/dashboard.svg')}}">
                             <a  style="color: black" href="{{route('dash')}}" id="dashb" class="">
-                                پنل کاربری
+                                داشبورد
                             </a>
                         </li>
                     <li>
