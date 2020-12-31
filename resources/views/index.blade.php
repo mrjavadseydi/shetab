@@ -54,7 +54,10 @@
                         <a class="nav-link page-scroll" href="#home">خانه</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#app-features">ورود به سامانه</a>
+                        <a class="nav-link page-scroll" href="#app-features">قابلیت های سامانه </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{{route('login')}}">ورود به سامانه </a>
                     </li>
                 </ul>
             </div>
