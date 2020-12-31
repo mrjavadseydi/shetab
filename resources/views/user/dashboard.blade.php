@@ -105,7 +105,7 @@
                     </tbody>
                 </table>
                 <br>
-                <p>لیست تسهیلات</p>
+                <p>لیست جوایز</p>
                 <table class="GeneratedTable">
                     <thead>
                     <tr>
