@@ -14,7 +14,7 @@
 Route::get('/', function () {
     \Illuminate\Support\Facades\Artisan::call('view:clear');
     if (auth()->check()) {
-        return redirect(route('profile'));
+        return redirect(route('dash'));
     }
     else {
         return view('welcome');
