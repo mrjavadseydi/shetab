@@ -17,11 +17,15 @@ Route::get('/', function () {
         return redirect(route('dash'));
     }
     else {
-        return view('welcome');
+        return view('index');
     }
 });
 
-Auth::routes();
+Auth::routes(['register'=>false]);
+Route::get('/login',function (){
+    return view('welcome');
+
+})->name('login');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::prefix('userPanel')->middleware(['auth','point'])->group(function () {
     Route::get('/Dashboard', 'PanelController@dashboard')->name('dash');
