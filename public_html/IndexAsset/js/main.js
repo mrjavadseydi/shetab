@@ -1,24 +1,24 @@
 (function($) {
-  
+
   "use strict";
-  
+
   /* Page Loader active
   ========================================================*/
   $('#preloader').fadeOut();
 
-  /* 
+  /*
   CounterUp
   ========================================================================== */
   $('.counter').counterUp({
     time: 500
-  });  
-  
-  /* 
+  });
+
+  /*
   MixitUp
   ========================================================================== */
   $('#portfolio').mixItUp();
 
-  /* 
+  /*
    Screens Crouserl
    ========================================================================== */
     $('#carousel-screen').carousel({
@@ -29,10 +29,10 @@
       scale: 0.6,
       animationTime: 1000,
       showTime: 4000
-    });   
+    });
 
-  /* 
-   Clients Sponsor 
+  /*
+   Clients Sponsor
    ========================================================================== */
     var owl = $("#clients-scroller");
     owl.owlCarousel({
@@ -49,7 +49,7 @@
       itemsMobile : [479,1],
     });
 
-  /* Testimonials Carousel 
+  /* Testimonials Carousel
   ========================================================*/
   var owl = $("#testimonials");
     owl.owlCarousel({
@@ -65,15 +65,14 @@
       itemsTablet: [767,1],
       itemsTabletSmall: [480,1],
       itemsMobile : [479,1],
-    });   
+    });
 
-  /* 
+  /*
    Touch Owl Carousel
    ========================================================================== */
     var owl = $(".touch-slider");
     owl.owlCarousel({
       navigation: false,
-      pagination: true,
       slideSpeed: 1000,
       stopOnHover: true,
       autoPlay: true,
@@ -83,8 +82,6 @@
       itemsMobile: [479, 1]
     });
 
-    $('.touch-slider').find('.owl-prev').html('<i class="lni-arrow-left"></i>');
-    $('.touch-slider').find('.owl-next').html('<i class="lni-arrow-right"></i>');
 
     /* Screens Shot Slider
     =============================*/
@@ -96,13 +93,13 @@
         stopOnHover: true,
         autoPlay: true,
         addClassActive: true,
-        items: 3,
+        items: 4,
         itemsDesktopSmall: [1024, 3],
         itemsTablet: [600, 1],
         itemsMobile: [479, 1]
       });
 
-  /* 
+  /*
    Sticky Nav
    ========================================================================== */
     $(window).on('scroll', function() {
@@ -113,7 +110,7 @@
         }
     });
 
-  /* 
+  /*
  VIDEO POP-UP
  ========================================================================== */
   $('.video-popup').magnificPopup({
@@ -125,7 +122,7 @@
       fixedContentPos: false,
   });
 
-  /* 
+  /*
    Back Top Link
    ========================================================================== */
     var offset = 200;
@@ -146,14 +143,14 @@
       return false;
     })
 
-  /* 
+  /*
    One Page Navigation & wow js
    ========================================================================== */
     //Initiat WOW JS
     new WOW().init();
 
     $(window).on('load', function() {
-       
+
         $('body').scrollspy({
             target: '.navbar-collapse',
             offset: 195
@@ -185,7 +182,7 @@
   $(window).resize(close_toggle);
 
   /* Nivo Lightbox
-  ========================================================*/   
+  ========================================================*/
    $('.lightbox').nivoLightbox({
     effect: 'fadeScale',
     keyboardNav: true,

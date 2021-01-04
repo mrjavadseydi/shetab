@@ -19,22 +19,31 @@
     <link rel="stylesheet" href="{{asset('IndexAsset')}}/css/nivo-lightbox.css">
     <link rel="stylesheet" href="{{asset('IndexAsset')}}/css/main.css">
     <link rel="stylesheet" href="{{asset('IndexAsset')}}/css/responsive.css">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v27.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v27.1.0/dist/font-face.css" rel="stylesheet"
+          type="text/css"/>
     <style>
-        body{
+        body {
             direction: rtl;
 
         }
-        *{
+
+        * {
             font-family: Vazir !important;
         }
-        .hero-area-2 .overlay{
-            background-image:-webkit-linear-gradient(260deg, #3c96ff 0%, #2dfbff 100%);
+
+        .hero-area-2 .overlay {
+            background-image: -webkit-linear-gradient(260deg, #3c96ff 0%, #2dfbff 100%);
         }
-        footer .footer-Content{
+
+        footer .footer-Content {
             padding: 0;
         }
+
+        #app-features {
+            background: #ffffff;
+        }
     </style>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" rel="stylesheet" >
 </head>
 
 <body dir="rtl">
@@ -44,8 +53,10 @@
     <div class="overlay"></div>
     <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
         <div class="container">
-            <a href="index.html" class="navbar-brand"><img style="height: 100px" src="{{asset('image/22222.png')}}" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <a href="index.html" class="navbar-brand"><img style="height: 55px" src="{{asset('IndexAsset/img/33.png')}}"
+                                                           alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="lni-menu"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -54,7 +65,13 @@
                         <a class="nav-link page-scroll" href="#home">خانه</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#screenshots">تصاویر</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link page-scroll" href="#app-features">قابلیت های سامانه </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#pricing">جوایز</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="{{route('login')}}">ورود به سامانه </a>
@@ -66,8 +83,9 @@
     <div class="container">
         <div class="row space-100">
             <div class="col-lg-7 col-md-12 col-xs-12">
-                <div class="contents">
-                    <h2 class="head-title">سامانه شناسایی و تواندمندسازی استعداد های برتر <br> دانشگاه بیرحند</h2>
+                <div class="contents" >
+                    <h2 class="head-title" style="    font-family: 'Shabnam' !important; ">سامانه شتاب  دانشگاه بیرجند </h2>
+                    <span style="font-size: 25px;color:white; font-family: 'Shabnam' !important;" >شناسایی و تواندمندسازی استعداد های برتر </span>
                     <div class="header-button">
                         <a href="{{route('login')}}" class="btn btn-border-filled">ورود به سامانه</a>
                     </div>
@@ -75,14 +93,50 @@
             </div>
             <div class="col-lg-5 col-md-12 col-xs-12">
                 <div class="intro-img">
-                    <img src="{{asset('image/up.png')}}" alt="">
+                    <img src="{{asset('IndexAsset/img/ORFF330.png')}}" alt="">
                 </div>
             </div>
         </div>
     </div>
 </header>
 <!-- Header Section End -->
-
+<section id="screenshots" class="screens-shot section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">تصاویر</h2>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{asset('IndexAsset/img/screens/img-1.jpg')}}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{{asset('IndexAsset/img/screens/img-2.jpg')}}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{{asset('IndexAsset/img/screens/img-3.jpg')}}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{{asset('IndexAsset/img/screens/img-4.jpg')}}" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
 <!-- features Section Start -->
 <div id="app-features" class="section">
     <div class="container">
@@ -99,7 +153,8 @@
                 </span>
                         <div class="text">
                             <h4>سرعت بالا</h4>
-                            <p>برای استفاده از این سامانه نیازی به مراجعه حضوری نیست و شما میتوانید حتی در خانه امتیاز کسب کنید</p>
+                            <p>برای استفاده از این سامانه نیازی به مراجعه حضوری نیست و شما میتوانید حتی در خانه امتیاز
+                                کسب کنید</p>
                         </div>
                     </div>
                     <div class="box-item left">
@@ -124,7 +179,7 @@
             </div>
             <div class="col-lg-4 col-md-12 col-xs-12">
                 <div class="show-box">
-                    <img src="img/features/app.png" alt="">
+                    <img src="{{asset('IndexAsset/img/4006367.jpg')}}" alt="">
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 col-xs-12">
@@ -161,6 +216,82 @@
         </div>
     </div>
 </div>
+<div id="pricing" class="section pricing-section">
+    <div class="container">
+        <div class="section-header">
+            <p class="btn btn-subtitle wow fadeInDown animated" data-wow-delay="0.2s"
+               style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                جوایز</p>
+            <h2 class="section-title">جوایز در نظر گرفته شده ویژه دانشجویان برتر</h2>
+        </div>
+
+        <div class="row pricing-tables">
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="pricing-table wow fadeInLeft animated" data-wow-delay="0.2s"
+                     style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                    <div class="pricing-details">
+                        <div class="icon">
+                            <i class="lni-rocket"></i>
+                        </div>
+                        <h2>جایزه دکتر شکوهی ( آموزش )</h2>
+                        <ul>
+                            <li>اعتبار توان مندی آموزشی</li>
+                            <li>اعتبار کار آفرینی</li>
+                            <li>اعتبار مهارت افزایی</li>
+                            <li>کمک هزینه شرکت درمسابقات مورد تایید گروه</li>
+                        </ul>
+
+                    </div>
+                    <div class="plan-button">
+                        <a href="{{route('login')}}" class="btn btn-border">شروع کنید</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="pricing-table pricing-active">
+                    <div class="pricing-details">
+                        <div class="icon">
+                            <i class="lni-drop"></i>
+                        </div>
+                        <h2>جایزه دکتر گنجی ( پژوهشی )</h2>
+                        <ul>
+                            <li>اعتبار ارتباطات علمی</li>
+                            <li> اعتبار اجرای پایان نامه کارشناسی</li>
+                            <li>اعتبار مشارکت در فعالیت های نوآوری و کار آموزی</li>
+                            <li> اعتبارشرکت در مجامع معتبر داخلی</li>
+
+                        </ul>
+                    </div>
+                    <div class="plan-button">
+                        <a href="{{route('login')}}" class="btn btn-border">شروع کنید</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="pricing-table">
+                    <div class="pricing-details">
+                        <div class="icon">
+                            <i class="lni-briefcase"></i>
+                        </div>
+                        <h2>جایزه دکتر معتمد نژاد ( فرهنگی )</h2>
+                        <ul>
+                            <li>راتبه دانشجویی</li>
+                            <li> هدیه ازدواج</li>
+                            <li> اعتبار برنامه ها و سفر های زیارتی و گردشگری</li>
+                            <li> کمک هزینه شهریه خوابگاه</li>
+                        </ul>
+                    </div>
+                    <div class="plan-button">
+                        <a href="{{route('login')}}" class="btn btn-border">شروع کنید</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 <!-- features Section End -->
 <footer>
     <!-- Footer Area Start -->
@@ -171,7 +302,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="site-info float-left">
-                            <p>طراحی و توسعه توسط <a href="https://daneshjooyar.com" >دانشجویار</a></p>
+                            <p>طراحی و توسعه توسط <a href="https://daneshjooyar.com">دانشجویار</a></p>
                         </div>
                     </div>
                 </div>
@@ -209,9 +340,8 @@
 <script src="{{asset('IndexAsset')}}/js/nivo-lightbox.js"></script>
 <script src="{{asset('IndexAsset')}}/js/jquery.magnific-popup.min.js"></script>
 <script src="{{asset('IndexAsset')}}/js/waypoints.min.js"></script>
-<script src="{{asset('IndexAsset')}}/js/form-validator.min.js"></script>
-<script src="{{asset('IndexAsset')}}/js/contact-form-script.js"></script>
 <script src="{{asset('IndexAsset')}}/js/main.js"></script>
+
 
 </body>
 </html>
