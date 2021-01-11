@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="{{asset('image/fave.png')}}" type="image/x-icon" />
+    <link rel="icon" href="{{asset('image/fave.jpg')}}" type="image/x-icon" />
     <script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
     <link rel="stylesheet" href="{{asset('css/font.css')}}">
     <link rel="stylesheet" href="{{asset('css/all.css')}}">
@@ -48,7 +48,7 @@
 </head>
 <body>
 <header class="m-0 p-0 header-image d-inline">
-    <img src="{{asset('image/header.jpg')}}" class="image-responsiv ">
+    <img src="{{asset('image/inv.jpg')}}" class="image-responsiv ">
     <div class="container-fluid">
         <img src="{{asset('image/22222.png')}}" class="image-logo ">
     </div>

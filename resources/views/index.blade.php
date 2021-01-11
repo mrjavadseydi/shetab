@@ -42,6 +42,12 @@
         #app-features {
             background: #ffffff;
         }
+        .hero-area-2 .contents {
+
+            padding: 0;
+            padding-top: 78px;
+        }
+
     </style>
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" rel="stylesheet" >
 </head>
@@ -80,22 +86,17 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="">
         <div class="row space-100">
             <div class="col-lg-7 col-md-12 col-xs-12">
-                <div class="contents" >
-                    <h2 class="head-title" style="    font-family: 'Shabnam' !important; ">سامانه شتاب  دانشگاه بیرجند </h2>
-                    <span style="font-size: 25px;color:white; font-family: 'Shabnam' !important;" >شناسایی و تواندمندسازی استعداد های برتر </span>
+                <div class="contents">
+
                     <div class="header-button">
-                        <a href="{{route('login')}}" class="btn btn-border-filled">ورود به سامانه</a>
+                        <img src="http://shetab.birjand.ac.ir/image/l2.jpg" alt="" style="width: 174%;">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-12 col-xs-12">
-                <div class="intro-img">
-                    <img src="{{asset('IndexAsset/img/ORFF330.png')}}" alt="">
-                </div>
-            </div>
+
         </div>
     </div>
 </header>
@@ -117,13 +118,20 @@
                     <img class="d-block w-100" src="{{asset('IndexAsset/img/screens/img-1.jpg')}}" alt="First slide">
                 </div>
                 <div class="carousel-item">
+                    <a href="#pricing">
                     <img class="d-block w-100" src="{{asset('IndexAsset/img/screens/img-2.jpg')}}" alt="Second slide">
+                    </a>
                 </div>
                 <div class="carousel-item">
+                    <a href="#pricing">
                     <img class="d-block w-100" src="{{asset('IndexAsset/img/screens/img-3.jpg')}}" alt="Third slide">
+                    </a>
                 </div>
                 <div class="carousel-item">
+                    <a href="#pricing">
+
                     <img class="d-block w-100" src="{{asset('IndexAsset/img/screens/img-4.jpg')}}" alt="Third slide">
+                    </a>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
